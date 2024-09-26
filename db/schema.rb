@@ -10,5 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_26_103950) do
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "username"
+    t.integer "role"
+    t.string "phone"
+    t.integer "coins"
+    t.float "total_deposit"
+    t.integer "children_members"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
